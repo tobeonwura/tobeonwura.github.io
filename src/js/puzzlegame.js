@@ -14,7 +14,7 @@ checkWinner= function(){
     document.getElementById("btn7").value=="7"&&
     document.getElementById("btn8").value=="8"&&
     document.getElementById("btn9").value==" "){
-        window.alert("YOU WON!!!");
+        window.alert("Congratulations! You Won!!!");
     }
 }
 

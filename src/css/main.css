@@ -86,13 +86,13 @@ a{
     width: 200px;
 }
 
-.programmer-img{
+.skills-left-img{
     width: 25%; 
     float: left;
     margin-right: 30px;
 }
 
-.farmer-img{
+.skills-right-img{
     width: 25%; 
     float: right;
     margin-left: 30px;
@@ -139,19 +139,38 @@ a{
     text-decoration: none;
   }
 
-  .bottom-container{
+
+/* bottom container(footer) styling */  
+.bottom-container{
     background-color: #66BFBF;
     padding:50px 0 20px;
-  }
+}
+  
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 15px;
+}
+.footer-icons .icon {
+    font-size: 28px;
+    color: white;
+    transition: 0.3s ease;
+}
+.footer-icons .icon:hover {
+    opacity: 0.7;
+    transform: scale(1.1);
+}
 
-  .copyright{
+.copyright{
     color: #EAF6F6;
     font-size: 0.75rem;
     padding: 20px 0;
-  }
+}
 
-  /* styling for puzzlegame container*/
   
+
+/* styling for puzzlegame container*/  
 #puz-container{
     background-color: #531e05;
     border: 5px solid;
