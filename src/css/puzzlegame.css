@@ -1,8 +1,8 @@
 /* styling for puzzlegame container*/  
 #puz-container{
     background-color: #272524;
-    border: 8px solid;
     border-color: black;
+    border: 8px solid;
     width: 300px;
     height: 300px;
     position: relative;
@@ -10,13 +10,13 @@
 }
 
 .puz-btn{
+    background-color: #1eb4bcc7;
     position: relative;
     width: 20%;
     height: 20%;
     margin-right: -10px;
     font-size: 200%;
     font-weight: bold;
-    background-color: #1eb4bcc7;
 }
 
 .puz-btn:hover{

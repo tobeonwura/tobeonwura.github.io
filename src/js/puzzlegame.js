@@ -4,14 +4,19 @@ let bottomText;
 let leftText;
 let ownText;
 let userText;
+let gameLevel;
 
 window.addEventListener("load", () => {
   let userName = localStorage.getItem("user_name");
+  let level = localStorage.getItem("game_level");
 
-  if (!userName) {
+  if(!level){
+    localStorage.setItem("game_level", 1);
+  }
+
+  if(!userName){
     userName = prompt("Please enter your name:");
-
-    if (userName && userName.trim() !== "") {
+    if (userName && userName.trim() !== ""){
       localStorage.setItem("user_name", userName.trim());
     }
   }
@@ -20,6 +25,12 @@ window.addEventListener("load", () => {
     userText = userName;
   } else {
     userText = "Friend";
+  }
+
+  if (level) {
+    gameLevel = level;
+  } else {
+    gameLevel = 1;
   }
 });
 
@@ -50,8 +61,19 @@ checkWinner= function(){
     document.getElementById("btn3").value=="23"&&
     document.getElementById("btn4").value=="24"&&
     document.getElementById("btn5").value==" "){
-        window.alert(`Congratulations ${userText}! You solved the puzzle!!!`);
+        window.alert(`Congratulations ${userText}! You solved the puzzle level${gameLevel}!!!`);
+        if(gameLevel === 3 || gameLevel > 3){
+            gameLevel = 3;
+            localStorage.setItem("game_level", gameLevel);
+        }else{
+            gameLevel = gameLevel + 1;
+            localStorage.setItem("game_level", gameLevel);
+        }
     }
+}
+
+scrambleGame = function(inputGameLevel){
+    window.alert(`Scrambled game level ${gameLevel}!!!`);
 }
 
 playButton = function(num){
@@ -82,6 +104,10 @@ playButton = function(num){
     }
 
     checkWinner();
+}
+
+document.getElementById("btn-scramble").onclick = function(){
+    scrambleGame(gameLevel);
 }
 
 document.getElementById("btn1").onclick = function(){
