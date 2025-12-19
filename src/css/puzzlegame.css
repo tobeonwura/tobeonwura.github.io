@@ -23,3 +23,20 @@
     background-color: #1e6278;
     color : white;
 }
+
+#btn-scramble-text{
+    color: #141d1d;
+    background-color: #15586f;
+    font-family: 'Montserrat', sans-serif;
+    width: 30%;
+    height: 10%;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#btn-scramble-text:hover{
+    color: #f10b5f;
+}
